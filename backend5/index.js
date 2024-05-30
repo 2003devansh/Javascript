@@ -16,7 +16,7 @@ app.use(express.urlencoded({
 // yeh dono usi kaam aate hai or i say ki in dono ki wajah se humko hamari required information  mill jati hai 
 
 
- app.get("/" , (req,res,next)=>{
+ app.get("/" , (req,res)=>{
    res.send("about my page ")
  })
 

@@ -15,9 +15,10 @@ app.use(express.json()) ;
 app.use(express.urlencoded({
     extended:  true  
 }))
+app.set("view engine" , "ejs")
 
 app.get("/" ,(req,res)=>{
-   res.send("eppy boiii")
+   res.render("eppy boiii")
 })
 
 app.listen(1000)

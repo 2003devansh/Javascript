@@ -24,4 +24,15 @@ app.get("/" ,(req,res)=>{
 })
 
 
+// dynamic routing :- 
+// jab hamara koi route baar baar repeat ho rha hota hai toh
+// jo chiz repeat ho rhi hai uske aage agar : lga dein to 
+// voh as a variable treat hoga 
+// :username iska mtlb  yeh part dynamic hai 
+
+ app.get("/profile/:username" , (req,res,next)=>{
+    res.send(`welcome ${req.params.username}`)
+ })
+
+
 app.listen(1000)

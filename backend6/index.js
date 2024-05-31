@@ -22,6 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get("/" ,(req,res)=>{
    res.render("index.ejs")
 })
-//w
+
 
 app.listen(1000)

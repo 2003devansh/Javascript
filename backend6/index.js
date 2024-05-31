@@ -10,15 +10,18 @@
 
 const express  = require("express") ; 
 const app  = express() ; 
-
+const path  = require("path") ; 
 app.use(express.json()) ;
 app.use(express.urlencoded({
     extended:  true  
 }))
-app.set("view engine" , "ejs")
+app.set("view engine" , "ejs"); 
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.get("/" ,(req,res)=>{
-   res.render("eppy boiii")
+   res.render("index.ejs")
 })
+//w
 
 app.listen(1000)

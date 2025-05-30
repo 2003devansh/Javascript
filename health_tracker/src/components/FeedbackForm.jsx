@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const FeedbackForm = () => {
+const FeedbackForm = ({addFeedBack}) => {
   const [text,setText] = useState("");
   const [rating,setRating] = useState(0);
 
@@ -17,7 +17,7 @@ const FeedbackForm = () => {
         return 
      }
 
-     console.log({text,rating});
+     addFeedBack({text,rating}); 
      setText(""); 
      setRating(0); 
      
